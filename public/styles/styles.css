@@ -1,0 +1,52 @@
+body {
+  place-content: center;
+  display: grid;
+  background-color: rgb(56, 56, 56);
+}
+
+.app {
+  border: 1px solid black;
+  padding: 16px;
+  margin-top: 16px;
+  background-color: #041b2b;
+}
+
+h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+.app-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: space-between;
+}
+
+.cuadro {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid rgba(30, 62, 165, 0.13);
+  cursor: pointer;
+}
+
+.d-color {
+  color: #3498db;
+  font-size: 0.8em;
+}
+
+.two-color {
+  color: #88bddf;
+  font-size: 1em;
+}

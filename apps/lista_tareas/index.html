@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lista_tareas.css">
+    <link rel="stylesheet" href="/public/styles/lista_tareas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300&display=swap" rel="stylesheet">
     <title>Lista de Tareas</title>
 </head>
+
 <body>
 
     <div class="container">
         <h1>Lista de Tareas</h1>
         <div id="task-form" class="task-form">
             <label for="task-name">Nombre de la tarea:</label>
-            <input type="text" id="task-name" required> 
+            <input type="text" id="task-name" required>
 
             <label for="task-description">Descripción:</label>
             <textarea id="task-description"></textarea>
 
             <label for="task-date">Fecha:</label>
-            <input type="date" id="task-date" required> 
+            <input type="date" id="task-date" required>
 
             <label for="task-time">Hora:</label>
             <input type="time" id="task-time">
@@ -29,24 +34,24 @@
         <div id="task-list"></div>
     </div>
 
-    
+
     <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <label for="edit-task-name">Nuevo nombre de la tarea:</label>
-            <input type="text" id="edit-task-name" required> 
+            <input type="text" id="edit-task-name" required>
 
             <label for="edit-task-description">Nueva descripción:</label>
             <textarea id="edit-task-description"></textarea>
 
             <label for="edit-task-date">Nueva fecha:</label>
-            <input type="date" id="edit-task-date" required> 
+            <input type="date" id="edit-task-date" required>
 
             <label for="edit-task-time">Nueva hora:</label>
             <input type="time" id="edit-task-time">
 
             <button onclick="saveChanges()">Guardar Cambios</button>
-          
+
             <button onclick="closeModalWithoutSaving()">Cerrar sin guardar</button>
         </div>
     </div>
@@ -54,4 +59,5 @@
 
     <script src="lista_tareas.js"></script>
 </body>
+
 </html>
