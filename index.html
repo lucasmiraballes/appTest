@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Lista de Compras</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="enc">
+            <h1>Lista de Compras</h1>
+            <small>Puedes cambiar el precio de los productos!</small>
+        </div>
+        <div>
+            <label for="producto">Producto:</label>
+            <input type="text" id="producto" placeholder="Nombre del producto">
+            <button class="addProdButton" onclick="agregarProducto()">Agregar</button>
+        </div>
+        <ul id="listaProductos"></ul>
+        <div id="total">Total: $0</div>
+        <div id="mensaje"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
