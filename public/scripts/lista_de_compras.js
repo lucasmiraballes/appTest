@@ -43,18 +43,24 @@ function actualizarListaProductos() {
       <button class="btn-eliminar" onclick="eliminarProducto(${index})"><i class="fa fa-trash-o"></i></button>
         <span class="${producto.tachado ? 'tachado' : ''}">
           <span class="prod-name">${producto.nombre}</span> - $<span class="precio" id="precio-${index}" contenteditable 
-            oninput="actualizarPrecio(${index}, this.innerText)">${producto.precio.toFixed(2)}</span> 
-          <input type="number" value="${producto.cantidad}" min="1" class="input-cantidad"
-            onchange="actualizarCantidad(${index}, this.value)">
-          <button class="aum" onclick="incrementarCantidad(${index})">+</button>
-          <button class="decr" onclick="decrementarCantidad(${index})">-</button>
-          <button class="btn-prod" onclick="tacharProducto(${index})">&#10004;</button>
-        </span>
+            oninput="actualizarPrecio(${index}, this.innerText)">${producto.precio.toFixed(2)}</span><br>
+            <div class="spaced-li">
+              <input type="number" value="${producto.cantidad}" min="1" class="input-cantidad"
+              onchange="actualizarCantidad(${index}, this.value)">
+              <button class="aum" onclick="incrementarCantidad(${index})">+</button>
+              <button class="decr" onclick="decrementarCantidad(${index})">-</button>
+              <button class="btn-prod" onclick="tacharProducto(${index})">&#10004;</button>
+            </div>
+          </span>
       `;
       listaProductosElement.appendChild(nuevoProducto);
     });
   }
   
+
+function showInfo(index) {
+
+}
 
 function actualizarPrecio(index, nuevoPrecio) {
   listaProductos[index].precio = parseFloat(nuevoPrecio) || 0;

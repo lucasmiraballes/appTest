@@ -169,13 +169,13 @@ function renderTasks() {
         // Div para mostrar el nombre de la tarea
         const taskNameDiv = document.createElement('div');
         taskNameDiv.classList.add('task-name');
-        taskNameDiv.textContent = `Nombre de la tarea: ${task.name ? task.name : 'Sin nombre'}`;
+        taskNameDiv.innerHTML = `<strong>Tarea: </strong> ${task.name ? task.name : 'Sin nombre'}`;
         
         // Div para mostrar la fecha y hora
         const taskHeader = document.createElement('div');
         taskHeader.classList.add('task-header');
 
-        taskHeader.innerHTML = `<strong>Fecha: </strong> ${task.date ? formatDate(task.date) : 'Sin fecha'} <span style="margin-left: auto;">` +
+        taskHeader.innerHTML = `<strong>Fecha: </strong> ${task.date ? formatDate(task.date) : 'Sin fecha'}` + `<br>` +
                               `<strong>Hora: </strong> ${task.time ? task.time : ''}</span>`;
 
         const taskDescription = document.createElement('p');
@@ -216,7 +216,7 @@ function getOrCreateDayElement(day, alternateColor) {
     const dayElement = document.createElement('div');
     dayElement.classList.add('day-container');
     dayElement.dataset.day = day;
-    dayElement.style.backgroundColor = alternateColor ? '#f2f2f2' : '#e0e0e0';
+    // dayElement.style.backgroundColor = '#3498db'
 
     const line = document.createElement('hr');
     dayElement.appendChild(line);
