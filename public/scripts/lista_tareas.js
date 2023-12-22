@@ -20,16 +20,21 @@ function formatDate(inputDate) {
     const dateParts = inputDate.split(/[/ -]/);
 
     if (dateParts.length === 3) {
-        // Asumimos que es el formato dd/mm/yyyy o yyyy-mm-dd
         const [year, month, day] = dateParts.map(part => parseInt(part, 10));
-
+    
         if (!isNaN(year) && !isNaN(month) && !isNaN(day)) {
+            const meses = [
+                'Enero', 'Febrero', 'Marzo', 'Abril',
+                'Mayo', 'Junio', 'Julio', 'Agosto',
+                'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+            ];
+    
             // Corregimos el formato de salida
             console.log('Fecha procesada:', day, month, year);
-            return `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year}`;
+            return `${day.toString().padStart(2, '0')}/${meses[month - 1]}/${year}`;
         }
     }
-
+    
     console.error('Fecha inválida: Formato incorrecto o componentes de fecha no válidos');
     return 'Fecha inválida';
 }
